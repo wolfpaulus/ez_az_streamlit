@@ -10,8 +10,8 @@ from app import ui
 class Test(TestCase):
     def test_ui_title_and_header(self):
         at = AppTest.from_file("./src/app.py")
-        at.run()        
+        at.run()
+
         assert at.title[0].value == "Streamlit Demo"
         assert at.subheader[0].value.startswith("..")
         assert not at.exception
-        
